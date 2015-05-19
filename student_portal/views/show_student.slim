@@ -1,0 +1,10 @@
+h1= @stud.name
+p Date Of Birth: #{@stud.DOB.strftime("%e %B %Y") if @stud.DOB}
+p Department: #{@stud.department}
+p class of: #{@stud.grad_year}
+
+p <a href="/students">back to students index</a>
+p <a href="/students/#{@stud.id}/edit">edit this student</a>
+form action="/students/#{@stud.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+    input type="submit" value="delete this student"

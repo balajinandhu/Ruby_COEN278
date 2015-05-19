@@ -1,0 +1,13 @@
+doctype html
+html lang="en"
+  head
+    title== @title || "Student Portal"
+    meta charset="utf-8"
+    link rel="stylesheet" href="/styles.css"
+  body
+    header
+      h1 Welcome to Student Portal of SCU
+      == slim :nav
+    section
+      == yield
+					  

@@ -1,0 +1,8 @@
+h1 Students
+a href="/students/new" Create a new student
+- if @stud.any?
+  ul#students
+      -@stud.each do |stud|
+            li <a href="/students/#{stud.id}">#{stud.name}</a>
+- else
+  p No students have been created yet!

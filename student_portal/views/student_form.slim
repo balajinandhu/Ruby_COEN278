@@ -1,0 +1,11 @@
+label for="name" Name:
+input#title type="string" name="stud[name]" value="#{@stud.name}"
+label for="department" Department:
+input#department type="text" name="stud[department]" value="#{@stud.department}"
+label for="DOB" Date of birth(mm/dd/yyyy):
+input#DOB type="text" name="stud[DOB]" value="#{@stud.DOB.strftime("%m/%d/%Y") if @stud.DOB}"
+label for="grad_year" Class Of:
+input#grad_year type="text" name="stud[grad_year]" value= @stud.grad_year
+br
+br
+input type="submit" value="Save Student"
